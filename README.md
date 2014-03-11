@@ -8,7 +8,7 @@ A simple and sweet design system
 * Mettre un espace après un `:` lors de la declaration d'une propriété.
 * Mettre un espace avant une `{` et un retour à la ligne après la déclaration d'une règle.
 * Utiliser les codes hexadécimaux `#FFF` pour les couleurs, sauf s'il y a utilisation de rgba.
-* Utiliser // pour les commentaires, même en bloc.
+* Utiliser `//` pour les commentaires, même en bloc.
 
 **Exemple**
 ```CSS
