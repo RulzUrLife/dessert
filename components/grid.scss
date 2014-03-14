@@ -2,8 +2,8 @@
 // See: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 *, *:before, *:after {
   -moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
  }
 
 // Grid system
@@ -13,69 +13,69 @@ $row_size: 40px;
 $container_width: 1000px;
 
 .container {
-	max-width: $container_width;
-	width: 94%;
-	margin: 0 auto;
-	
-	@include breakpoint(m) {
-		width: 100%;
-		padding: 0 20px;
-	}
+  max-width: $container_width;
+  width: 94%;
+  margin: 0 auto;
+
+  @include breakpoint(m) {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 // Column classes
 @for $max_col from 1 through $columns {
-	@for $col from 1 through $max_col {
-		.col#{$col}of#{$max_col} {
-			float: left;
-			width: $col / $max_col * 100%;
+  @for $col from 1 through $max_col {
+    .col#{$col}of#{$max_col} {
+      float: left;
+      width: $col / $max_col * 100%;
 
-			@include breakpoint(s) {
-				width: 100%;
-				max-width: 100%;
-			}
-		}
-	}
+      @include breakpoint(s) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 // Row classes
 @for $row from 1 through $rows {
-	.row#{$row} {
-		height: $row * $row_size;
-		
-		@include breakpoint(s) {
-			height: auto;
-			min-height: $row * $row_size;
-		}
-	}
+  .row#{$row} {
+    height: $row * $row_size;
+
+    @include breakpoint(s) {
+      height: auto;
+      min-height: $row * $row_size;
+    }
+  }
 }
 
 // Margins left (push) & right (pull)
 @for $max_col from 1 through $columns {
-	@for $col from 1 through $max_col {
-		.pre#{$col}of#{$max_col} {
-			margin-left: $col / $max_col * 100%;
+  @for $col from 1 through $max_col {
+    .pre#{$col}of#{$max_col} {
+      margin-left: $col / $max_col * 100%;
 
-			@include breakpoint(s) {
-				margin-left: 0;
-			}
-		}
-	}
+      @include breakpoint(s) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 @for $max_col from 1 through $columns {
-	@for $col from 1 through $max_col {
-		.post#{$col}of#{$max_col} {
-			margin-right: $col / $max_col * 100%;
+  @for $col from 1 through $max_col {
+    .post#{$col}of#{$max_col} {
+      margin-right: $col / $max_col * 100%;
 
-			@include breakpoint(s) {
-				margin-right: 0;
-			}
-		}
-	}
+      @include breakpoint(s) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .centered {
-	float: none;
-	margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
