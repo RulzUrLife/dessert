@@ -2,8 +2,8 @@
 // See: http://css-tricks.com/conditional-media-query-mixins/
 @mixin breakpoint($point) {
 
-	$s: "(max-width:640px)";
-	$m: "(max-width:900px)";
+    $s: "(max-width:640px)";
+    $m: "(max-width:900px)";
 
   @if $point == s {
     @media #{$s} { @content; }
