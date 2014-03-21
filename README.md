@@ -14,6 +14,9 @@ A simple and sweet design system
 * `build` : compile les sources SASS en CSS
 * `watch` : lance `build` lorsqu'un fichier SASS est modifié
 
+## Lancer les tests
+* `npm test` appelle la tache Gulp `build` dans laquelle une règle CSSLint s'execute.
+
 # Organisation du projet
 ```
 /
