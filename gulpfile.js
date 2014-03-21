@@ -18,13 +18,9 @@ gulp.task('build', function() {
         .pipe(sass({ style: 'compressed' }))
         .pipe(autoprefixer('last 2 version', 'ios 6', 'android 4'))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.dist));
-});
-
-gulp.task('csslint', ['build'], function() {
-    return gulp.src(paths.css)
         .pipe(csslint('csslintrc.json'))
-        .pipe(csslint.reporter());
+        .pipe(csslint.reporter())
+        .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('watch', function() {
@@ -36,4 +32,4 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('default', ['csslint']);
+gulp.task('default', ['build']);
