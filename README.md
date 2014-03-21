@@ -3,7 +3,6 @@ Dessert ![Build status](https://api.travis-ci.org/RulzUrLife/dessert.svg?branch=
 
 A simple and sweet design system
 
-<<<<<<< HEAD
 # Build
 
 ## Installation
