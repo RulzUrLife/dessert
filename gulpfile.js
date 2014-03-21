@@ -24,7 +24,7 @@ gulp.task('build', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch([paths.sass], ['csslint']);
+    gulp.watch([paths.sass], ['build']);
 });
 
 gulp.task('clean', function() {
