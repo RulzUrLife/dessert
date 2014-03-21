@@ -1,0 +1,30 @@
+{
+  "name": "dessert",
+  "version": "0.0.1",
+  "description": "A simple and sweet design system",
+  "scripts": {
+    "test": "gulp csslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RulzUrLife/dessert.git"
+  },
+  "keywords": [
+    "design",
+    "system"
+  ],
+  "author": "Mathieu Bernard (@itsbrnrd)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RulzUrLife/dessert/issues"
+  },
+  "homepage": "https://github.com/RulzUrLife/dessert",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-ruby-sass": "^0.4.0",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-clean": "^0.2.4",
+    "gulp-csslint": "^0.1.3"
+  }
+}

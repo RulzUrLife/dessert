@@ -1,0 +1,8 @@
+{
+  "box-model": false,
+  "box-sizing": false,
+  "compatible-vendor-prefixes": false,
+  "floats": false,
+  "shorthand": true,
+  "universal-selector": false
+}
