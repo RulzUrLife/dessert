@@ -10,7 +10,7 @@ A simple and sweet design system
 2. Lancer `npm install` dans le dossier pour installer les plugins
 
 ## Taches de build
-* `clean` : supprime le CSS généré
+* `clean` : supprime le dossier `dist`
 * `build` : compile les sources SASS en CSS
 * `watch` : lance `build` lorsqu'un fichier SASS est modifié
 
