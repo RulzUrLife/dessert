@@ -3,7 +3,18 @@ Dessert
 
 A simple and sweet design system
 
-### Organisation du projet
+# Scripts de build
+
+## Installation
+1. `npm install -g gulp`
+2. Lancer `npm install` dans le dossier pour installer les plugins
+
+## Taches de build
+* `clean` : supprime le CSS généré
+* `build` : compile les sources SASS en CSS
+* `watch` : lance `build` lorsqu'un fichier SASS est modifié
+
+# Organisation du projet
 ```
 /
 ├── components
