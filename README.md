@@ -10,6 +10,10 @@ A simple and sweet design system
 2. Lancer `npm install` dans le dossier pour installer les plugins
 
 ## Taches de build
+
+Lancer `gulp [tache]` pour lancer une tâche Gulp.
+
+Les tâches suivantes sont disponibles :
 * `clean` : supprime le dossier `dist`
 * `build` : compile les sources SASS en CSS
 * `watch` : lance `build` lorsqu'un fichier SASS est modifié
