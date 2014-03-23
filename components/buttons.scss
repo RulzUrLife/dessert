@@ -1,9 +1,9 @@
 button,
 .button {
-	// <button> reset.
-	// (See: https://github.com/necolas/normalize.css/blob/master/normalize.css)
-	overflow: visible;
-	text-transform: none;
+  // <button> reset.
+  // (See: https://github.com/necolas/normalize.css/blob/master/normalize.css)
+  overflow: visible;
+  text-transform: none;
   margin: 0;
   border: 0;
   // <button> don't inherit their parent font
@@ -12,63 +12,63 @@ button,
   -webkit-font-smoothing: antialiased;
   color: $dark;
 
-	padding: 0.7rem 1.5rem;
-	white-space: nowrap;
-	display: inline-block;
-	width: auto;
-	text-align: center;
-	border-radius: 3px;
+  padding: 0.7rem 1.5rem;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  border-radius: 3px;
 
-	font-size: 0.9rem;
-	
-	cursor: pointer;
-	user-select: none;
-	transition: .2s background-color ease-in-out;
+  font-size: 0.9rem;
 
-	background: $lighter;
-	&:hover { background: darken($lighter, 10); }
-	&:active { background: darken($lighter, 20); }
+  cursor: pointer;
+  user-select: none;
+  transition: .2s background-color ease-in-out;
 
-	&.disabled,
-	&:disabled{
-		pointer-events: none;
-		opacity: .3;
-	}
+  background: $lighter;
+  &:hover { background: darken($lighter, 10); }
+  &:active { background: darken($lighter, 20); }
 
-	&.primary {
-		background: $primary;
-		color: #fff;
-	}
-	&.primary:hover { background: darken($primary, 10); }
-	&.primary:active { background: darken($primary, 20); }
+  &.disabled,
+  &:disabled{
+    pointer-events: none;
+    opacity: .3;
+  }
 
-	&.success {
-		background: $success;
-		color: #fff;
-	}
-	&.success:hover { background: darken($success, 10); }
-	&.success:active { background: darken($success, 20); }
+  &.primary {
+    background: $primary;
+    color: #fff;
+  }
+  &.primary:hover { background: darken($primary, 10); }
+  &.primary:active { background: darken($primary, 20); }
 
-	&.info {
-		background: $info;
-		color: #fff;
-	}
-	&.info:hover { background: darken($info, 10); }
-	&.info:active { background: darken($info,20); }
+  &.success {
+    background: $success;
+    color: #fff;
+  }
+  &.success:hover { background: darken($success, 10); }
+  &.success:active { background: darken($success, 20); }
 
-	&.warning {
-		background: $warning;
-		color: #fff;
-	}
-	&.warning:hover { background: darken($warning, 10); }
-	&.warning:active { background: darken($warning, 20); }
+  &.info {
+    background: $info;
+    color: #fff;
+  }
+  &.info:hover { background: darken($info, 10); }
+  &.info:active { background: darken($info,20); }
 
-	&.danger {
-		background: $danger;
-		color: #fff;
-	}
-	&.danger:hover { background: darken($danger, 10); }
-	&.danger:active { background: darken($danger, 20); }
+  &.warning {
+    background: $warning;
+    color: #fff;
+  }
+  &.warning:hover { background: darken($warning, 10); }
+  &.warning:active { background: darken($warning, 20); }
+
+  &.danger {
+    background: $danger;
+    color: #fff;
+  }
+  &.danger:hover { background: darken($danger, 10); }
+  &.danger:active { background: darken($danger, 20); }
 
 }
 
