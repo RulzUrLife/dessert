@@ -13,15 +13,12 @@ button,
 	width: 100%;
 	text-align: center;
 	border-radius: 3px;
-
-	font: normal 300 1em/150% 'Helvetica Neue', Helvetica, sans-serif;
 	
 	cursor: pointer;
 	user-select: none;
 	transition: .2s background-color ease-in-out;
 
 	background: $lighter;
-	color: $dark;
 	&:hover { background: darken($lighter, 10); }
 	&:active { background: darken($lighter, 20); }
 
