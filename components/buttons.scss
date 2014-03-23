@@ -29,6 +29,11 @@ button,
   &:hover { background: darken($lighter, 10); }
   &:active { background: darken($lighter, 20); }
 
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
   &.disabled,
   &:disabled{
     pointer-events: none;
