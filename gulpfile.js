@@ -52,6 +52,6 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('build:dist', ['clean', 'fonts', 'sass:dist']);
-gulp.task('build', ['clean', 'fonts', 'sass']);
+gulp.task('build:dist', ['fonts', 'sass:dist']);
+gulp.task('build', ['fonts', 'sass']);
 gulp.task('default', ['build']);
