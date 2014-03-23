@@ -1,0 +1,112 @@
+button,
+.button {
+	// Button reset.
+	// (See: https://github.com/necolas/normalize.css/blob/master/normalize.css)
+	overflow: visible;
+	text-transform: none;
+  margin: 0;
+  border: 0;
+
+	padding: 12px 24px;
+	white-space: nowrap;
+	display: block;
+	width: 100%;
+	text-align: center;
+	border-radius: 3px;
+
+	font: normal 300 1em/150% 'Helvetica Neue', Helvetica, sans-serif;
+	
+	cursor: pointer;
+	user-select: none;
+	transition: .2s background-color ease-in-out;
+
+	background: $lighter;
+	color: $dark;
+	&:hover { background: darken($lighter, 10); }
+	&:active { background: darken($lighter, 20); }
+	&.disabled,
+	&.disabled:hover,
+	&.disabled:active {
+		background: lighten($lighter, 5);
+		cursor: default;
+		color: lighten($dark, 30);
+	}
+
+	&.primary {
+		background: $primary;
+		color: #fff;
+	}
+	&.primary:hover { background: darken($primary, 10); }
+	&.primary:active { background: darken($primary, 20); }
+	&.primary.disabled,
+	&.primary.disabled:hover,
+	&.primary.disabled:active {
+		background: lighten($primary, 30);
+		cursor: default;
+		color: #fff;
+	}
+
+	&.success {
+		background: $success;
+		color: #fff;
+	}
+	&.success:hover { background: darken($success, 10); }
+	&.success:active { background: darken($success, 20); }
+	&.success.disabled,
+	&.success.disabled:hover,
+	&.success.disabled:active {
+		background: lighten($success, 30);
+		cursor: default;
+		color: #fff;
+	}
+
+	&.info {
+		background: $info;
+		color: #fff;
+	}
+	&.info:hover { background: darken($info, 10); }
+	&.info:active { background: darken($info,20); }
+	&.info.disabled,
+	&.info.disabled:hover,
+	&.info.disabled:active {
+		background: lighten($info, 20);
+		cursor: default;
+		color: #fff;
+	}
+
+	&.warning {
+		background: $warning;
+		color: #fff;
+	}
+	&.warning:hover { background: darken($warning, 10); }
+	&.warning:active { background: darken($warning, 20); }
+	&.warning.disabled,
+	&.warning.disabled:hover,
+	&.warning.disabled:active {
+		background: lighten($warning, 30);
+		cursor: default;
+		color: #fff;
+	}
+
+	&.danger {
+		background: $danger;
+		color: #fff;
+	}
+	&.danger:hover { background: darken($danger, 10); }
+	&.danger:active { background: darken($danger, 20); }
+	&.danger.disabled,
+	&.danger.disabled:hover,
+	&.danger.disabled:active {
+		background: lighten($danger, 30);
+		cursor: default;
+		color: #fff;
+	}
+
+}
+
+// Remove inner padding and border in Firefox 4+.
+// (See: https://github.com/necolas/normalize.css/blob/master/normalize.css)
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
