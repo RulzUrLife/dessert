@@ -70,6 +70,13 @@ button,
   &.danger:hover { background: darken($danger, 10); }
   &.danger:active { background: darken($danger, 20); }
 
+  &.dark {
+    background: $dark;
+    color: #fff;
+  }
+  &.dark:hover { background: darken($dark, 10); }
+  &.dark:active { background: darken($dark, 20); }
+
 }
 
 // Remove inner padding and border in Firefox 4+.
