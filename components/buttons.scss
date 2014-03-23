@@ -1,18 +1,24 @@
 button,
 .button {
-	// Button reset.
+	// <button> reset.
 	// (See: https://github.com/necolas/normalize.css/blob/master/normalize.css)
 	overflow: visible;
 	text-transform: none;
   margin: 0;
   border: 0;
+  // <button> don't inherit their parent font
+  font: inherit;
+  // <button> don't inherit this property from <html>
+  -webkit-font-smoothing: antialiased;
 
-	padding: 12px 24px;
+	padding: 0.7rem 1.5rem;
 	white-space: nowrap;
-	display: block;
-	width: 100%;
+	display: inline-block;
+	width: auto;
 	text-align: center;
 	border-radius: 3px;
+
+	font-size: 0.9rem;
 	
 	cursor: pointer;
 	user-select: none;
