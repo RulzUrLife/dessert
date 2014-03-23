@@ -24,12 +24,11 @@ button,
 	color: $dark;
 	&:hover { background: darken($lighter, 10); }
 	&:active { background: darken($lighter, 20); }
+	
 	&.disabled,
-	&.disabled:hover,
-	&.disabled:active {
-		background: lighten($lighter, 5);
-		cursor: default;
-		color: lighten($dark, 30);
+	&:disabled{
+		pointer-events: none;
+		opacity: .3;
 	}
 
 	&.primary {
@@ -38,13 +37,6 @@ button,
 	}
 	&.primary:hover { background: darken($primary, 10); }
 	&.primary:active { background: darken($primary, 20); }
-	&.primary.disabled,
-	&.primary.disabled:hover,
-	&.primary.disabled:active {
-		background: lighten($primary, 30);
-		cursor: default;
-		color: #fff;
-	}
 
 	&.success {
 		background: $success;
@@ -52,13 +44,6 @@ button,
 	}
 	&.success:hover { background: darken($success, 10); }
 	&.success:active { background: darken($success, 20); }
-	&.success.disabled,
-	&.success.disabled:hover,
-	&.success.disabled:active {
-		background: lighten($success, 30);
-		cursor: default;
-		color: #fff;
-	}
 
 	&.info {
 		background: $info;
@@ -66,13 +51,6 @@ button,
 	}
 	&.info:hover { background: darken($info, 10); }
 	&.info:active { background: darken($info,20); }
-	&.info.disabled,
-	&.info.disabled:hover,
-	&.info.disabled:active {
-		background: lighten($info, 20);
-		cursor: default;
-		color: #fff;
-	}
 
 	&.warning {
 		background: $warning;
@@ -80,13 +58,6 @@ button,
 	}
 	&.warning:hover { background: darken($warning, 10); }
 	&.warning:active { background: darken($warning, 20); }
-	&.warning.disabled,
-	&.warning.disabled:hover,
-	&.warning.disabled:active {
-		background: lighten($warning, 30);
-		cursor: default;
-		color: #fff;
-	}
 
 	&.danger {
 		background: $danger;
@@ -94,13 +65,6 @@ button,
 	}
 	&.danger:hover { background: darken($danger, 10); }
 	&.danger:active { background: darken($danger, 20); }
-	&.danger.disabled,
-	&.danger.disabled:hover,
-	&.danger.disabled:active {
-		background: lighten($danger, 30);
-		cursor: default;
-		color: #fff;
-	}
 
 }
 
