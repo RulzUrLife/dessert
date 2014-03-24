@@ -7,7 +7,7 @@ node --version
 npm install gulp
 npm install 
 cp ../../../jenkinsFix/protractor.js ./node_modules/protractor/lib/protractor.js
-./node_modules/gulp/bin/gulp build
+./node_modules/.bin/gulp build
 sed -E 's?<file name="(.*)\?">?<file name="'`pwd`'/\1">?' report/jshint-output.xml > report/jshint-proper.xml
 END=$(date +%s)
 DIFF=$(( $END - $START ))
