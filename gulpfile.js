@@ -37,8 +37,8 @@ gulp.task('sass', function() {
 
 // Copy all fonts
 gulp.task('fonts', function() {
- return gulp.src(paths.fonts, { base: './' })
-    .pipe(gulp.dest(paths.dist));
+    return gulp.src(paths.fonts, { base: './'})
+        .pipe(gulp.dest(paths.dist));
 });
 
 // Watches change in SASS files
@@ -52,6 +52,6 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('build:dist', ['clean', 'fonts', 'sass:dist']);
-gulp.task('build', ['clean', 'fonts', 'sass']);
+gulp.task('build:dist', ['fonts', 'sass:dist']);
+gulp.task('build', ['fonts', 'sass']);
 gulp.task('default', ['build']);

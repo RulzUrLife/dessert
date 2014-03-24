@@ -6,9 +6,9 @@ button,
   text-transform: none;
   margin: 0;
   border: 0;
-  // <button> don't inherit their parent font
+  // <button> don't inherit their parent font.
   font: inherit;
-  // <button> don't inherit this property from <html>
+  // <button> don't inherit this property from <html>.
   -webkit-font-smoothing: antialiased;
   color: $dark;
 
