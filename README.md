@@ -3,25 +3,24 @@ Dessert
 
 A simple and sweet design system
 
-# Scripts de build
+# Build
 
 ## Installation
 1. `npm install -g gulp`
-2. Lancer `npm install` dans le dossier pour installer les plugins
+2. Use `npm install` inside project's folder to install all the required dependencies
 
-## Taches de build
+## Tasks
+Usage: `gulp [task_name]`
 
-Lancer `gulp [tache]` pour lancer une tâche Gulp.
+Available tasks are:
+* `clean`: deletes the `dist` folder
+* `build`: compiles all the SASS files into a single, minifed, linted CSS
+* `watch`: runs the `build` task when a SASS file is modified
 
-Les tâches suivantes sont disponibles :
-* `clean` : supprime le dossier `dist`
-* `build` : compile les sources SASS en CSS
-* `watch` : lance `build` lorsqu'un fichier SASS est modifié
+## Tests
+* Use`npm test` which runs the `build` task
 
-## Lancer les tests
-* `npm test` appelle la tache Gulp `build` dans laquelle une règle CSSLint s'execute.
-
-# Organisation du projet
+# Project organisation
 ```
 /
 ├── components
