@@ -19,9 +19,9 @@ gulp.task('sass:dist', function() {
     return gulp.src('dessert.scss')
         .pipe(sass({ style: 'compressed' }))
         .pipe(autoprefixer('last 2 version', 'ios 6', 'android 4'))
-        .pipe(rename({suffix: '.min'}))
         .pipe(csslint('csslintrc.json'))
         .pipe(csslint.reporter())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.dist));
 });
 

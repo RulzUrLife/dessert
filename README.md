@@ -10,11 +10,15 @@ A simple and sweet design system
 2. Use `npm install` inside project's folder to install all the required dependencies
 
 ## Tasks
-Usage: `gulp [task_name]`
+Usage: `gulp` (calls default task) or `gulp [task_name]`
 
 Available tasks are:
 * `clean`: deletes the `dist` folder
-* `build`: compiles all the SASS files into a single, minifed, linted CSS
+* `fonts`: copies all the fonts from `fonts` folder to the `dist`folder
+* `sass`: compiles all the SASS files into a single and linted CSS `desset.css`
+* `sass:dist`: compiles all the SASS files into a single, minified and linted CSS `dessert.min.css`
+* **`build`: builds a developper friendly version dessert (default task)**
+* `build:dist`: builds a production-ready version dessert
 * `watch`: runs the `build` task when a SASS file is modified
 
 ## Tests
