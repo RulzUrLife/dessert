@@ -2,8 +2,8 @@
 // See: http://css-tricks.com/conditional-media-query-mixins/
 @mixin breakpoint($point) {
 
-    $m: "(min-width:40em)";
-    $l: "(min-width:64em)";
+  $m: "(min-width:40em)";
+  $l: "(min-width:64em)";
 
   @if $point == l {
     @media all and #{$l} { @content; }
