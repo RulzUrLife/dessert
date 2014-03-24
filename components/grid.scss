@@ -19,7 +19,7 @@ $container_width: 64rem;
 
   @include breakpoint(m) {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 1rem;
   }
 }
 
