@@ -2,13 +2,13 @@
 // See: http://css-tricks.com/conditional-media-query-mixins/
 @mixin breakpoint($point) {
 
-    $s: "(max-width:640px)";
-    $m: "(max-width:900px)";
+    $m: "(min-width:40em)";
+    $l: "(min-width:64em)";
 
-  @if $point == s {
-    @media #{$s} { @content; }
+  @if $point == l {
+    @media all and #{$l} { @content; }
   }
   @else if $point == m {
-    @media #{$m} { @content; }
+    @media all and #{$m} { @content; }
   }
 }
