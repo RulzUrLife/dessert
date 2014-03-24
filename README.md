@@ -1,4 +1,4 @@
-Dessert
+Dessert ![Build status](https://api.travis-ci.org/RulzUrLife/dessert.svg?branch=integration "Build status")
 =======
 
 A simple and sweet design system
