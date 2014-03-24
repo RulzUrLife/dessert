@@ -1,3 +1,7 @@
+$border-darken: 5;
+$hover-darken: 7;
+$active-darken: 15;
+
 button,
 .button {
   // <button> reset.
@@ -19,8 +23,8 @@ button,
   transition: .2s background-color ease-in-out;
 
   background: $lighter;
-  &:hover { background: darken($lighter, 10); }
-  &:active { background: darken($lighter, 20); }
+  &:hover { background: darken($lighter, $hover-darken); }
+  &:active { background: darken($lighter, $active-darken); }
 
   &.block {
     display: block;
@@ -30,50 +34,55 @@ button,
   &.disabled,
   &:disabled{
     pointer-events: none;
-    opacity: .3;
+    opacity: .5;
   }
 
   &.primary {
     background: $primary;
+    border: 1px solid darken($primary, $border-darken);
     color: #fff;
   }
-  &.primary:hover { background: darken($primary, 10); }
-  &.primary:active { background: darken($primary, 20); }
+  &.primary:hover { background: darken($primary, $hover-darken); }
+  &.primary:active { background: darken($primary, $active-darken); }
 
   &.success {
     background: $success;
+    border: 1px solid darken($success, $border-darken);
     color: #fff;
   }
-  &.success:hover { background: darken($success, 10); }
-  &.success:active { background: darken($success, 20); }
+  &.success:hover { background: darken($success, $hover-darken); }
+  &.success:active { background: darken($success, $active-darken); }
 
   &.info {
     background: $info;
+    border: 1px solid darken($info, $border-darken);
     color: #fff;
   }
-  &.info:hover { background: darken($info, 10); }
-  &.info:active { background: darken($info,20); }
+  &.info:hover { background: darken($info, $hover-darken); }
+  &.info:active { background: darken($info,$active-darken); }
 
   &.warning {
     background: $warning;
+    border: 1px solid darken($warning, $border-darken);
     color: #fff;
   }
-  &.warning:hover { background: darken($warning, 10); }
-  &.warning:active { background: darken($warning, 20); }
+  &.warning:hover { background: darken($warning, $hover-darken); }
+  &.warning:active { background: darken($warning, $active-darken); }
 
   &.danger {
     background: $danger;
+    border: 1px solid darken($danger, $border-darken);
     color: #fff;
   }
-  &.danger:hover { background: darken($danger, 10); }
-  &.danger:active { background: darken($danger, 20); }
+  &.danger:hover { background: darken($danger, $hover-darken); }
+  &.danger:active { background: darken($danger, $active-darken); }
 
   &.dark {
     background: $dark;
     color: #fff;
   }
-  &.dark:hover { background: darken($dark, 10); }
-  &.dark:active { background: darken($dark, 20); }
+  &.dark:hover { background: darken($dark, $hover-darken); }
+  &.dark:active { background: darken($dark, $active-darken); }
 }
 
 // Remove inner padding and border in Firefox 4+.
@@ -81,4 +90,21 @@ button,
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.boutton-group {
+  &>.button {
+    border: 1px solid darken($lighter, $border-darken);
+    margin-left: -5px;
+    border-radius: 0;
+  }
+
+  &>:first-child {
+    margin-left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+    &>:last-child {
+    border-radius: 0 3px 3px 0;
+  }
 }
