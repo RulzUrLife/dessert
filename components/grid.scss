@@ -9,8 +9,8 @@
 // Grid system
 $columns: 6;
 $rows: 16;
-$row_size: 40px;
-$container_width: 1000px;
+$row_size: 2.5rem;
+$container_width: 64rem;
 
 .container {
   max-width: $container_width;
@@ -19,7 +19,7 @@ $container_width: 1000px;
 
   @include breakpoint(m) {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 1rem;
   }
 }
 
