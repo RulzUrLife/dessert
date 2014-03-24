@@ -12,8 +12,8 @@ A simple and sweet design system
 ## Tasks
 Usage: `gulp [task_name]`
 
-Availables tasks are:
-* `clean`: delete the `dist` folder
+Available tasks are:
+* `clean`: deletes the `dist` folder
 * `build`: compiles all the SASS files into a single, minifed, linted CSS
 * `watch`: runs the `build` task when a SASS file is modified
 
