@@ -16,6 +16,13 @@ button,
   -webkit-font-smoothing: antialiased;
   color: $dark;
 
+  padding: 0.7rem 1.5rem;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  border-radius: 3px;
+
   font-size: 0.9rem;
 
   cursor: pointer;
@@ -23,6 +30,7 @@ button,
   transition: .2s background-color ease-in-out;
 
   background: $lighter;
+  border: 1px solid darken($lighter, $border-darken);
   &:hover { background: darken($lighter, $hover-darken); }
   &:active { background: darken($lighter, $active-darken); }
 
@@ -79,6 +87,7 @@ button,
 
   &.dark {
     background: $dark;
+    border: 1px solid darken($dark, $border-darken);
     color: #fff;
   }
   &.dark:hover { background: darken($dark, $hover-darken); }
@@ -94,7 +103,6 @@ button::-moz-focus-inner {
 
 .boutton-group {
   &>.button {
-    border: 1px solid darken($lighter, $border-darken);
     margin-left: -5px;
     border-radius: 0;
   }
