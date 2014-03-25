@@ -1,4 +1,4 @@
-Dessert [![Build Status](https://travis-ci.org/RulzUrLife/dessert.svg?branch=buttons-9)](https://travis-ci.org/RulzUrLife/dessert)
+Dessert [![Build Status](https://travis-ci.org/RulzUrLife/dessert.svg)](https://travis-ci.org/RulzUrLife/dessert)
 =======
 
 A simple and sweet design system
