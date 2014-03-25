@@ -1,4 +1,4 @@
-$border-darken: 5;
+$border-darken: 7;
 $hover-darken: 7;
 $active-darken: 15;
 
@@ -15,85 +15,79 @@ button,
   -webkit-font-smoothing: antialiased;
   color: $dark;
 
-  padding: .7rem 1.5rem;
-  &.small { padding: .5rem 1rem; }
-  white-space: nowrap;
+  // By default, buttons that takes up the entire width of its container
   display: block;
   width: 100%;
+  padding: .5em 1.5em;
+  white-space: nowrap;
   text-align: center;
   border-radius: 2px;
 
-  font-size: .9rem;
+  font-size: 1rem;
 
   cursor: pointer;
   user-select: none;
   transition: .2s background-color ease-in-out;
 
-  background: $lighter;
-  border: 1px solid darken($lighter, $border-darken);
-  &:hover { background: darken($lighter, $hover-darken); }
-  &:active { background: darken($lighter, $active-darken); }
-
-  &.block {
-    display: block;
-    width: 100%;
-  }
-
+  // Buttons you shouldn't be able to click on it
   &.disabled,
   &:disabled{
     pointer-events: none;
     opacity: .4;
   }
 
+  // Buttons that takes up the entire width of its container
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  // BUTTON STYLES
+
+  // Default: for standard actions
+  background: $lighter;
+  &:hover { background: darken($lighter, $hover-darken); }
+  &.selected,
+  &:active { background: darken($lighter, $active-darken); }
+
+  // Primary: for primary actions in forms
   &.primary {
     background: $primary;
-    border: 1px solid darken($primary, $border-darken);
     color: #fff;
   }
   &.primary:hover { background: darken($primary, $hover-darken); }
+  &.primary.selected,
   &.primary:active { background: darken($primary, $active-darken); }
 
+  // Success: for form whenever it creates something
   &.success {
     background: $success;
-    border: 1px solid darken($success, $border-darken);
     color: #fff;
   }
   &.success:hover { background: darken($success, $hover-darken); }
+  &.success.selected,
   &.success:active { background: darken($success, $active-darken); }
 
-  &.info {
-    background: $info;
-    border: 1px solid darken($info, $border-darken);
-    color: #fff;
-  }
-  &.info:hover { background: darken($info, $hover-darken); }
-  &.info:active { background: darken($info,$active-darken); }
-
-  &.warning {
-    background: $warning;
-    border: 1px solid darken($warning, $border-darken);
-    color: #fff;
-  }
-  &.warning:hover { background: darken($warning, $hover-darken); }
-  &.warning:active { background: darken($warning, $active-darken); }
-
+  // Danger: for bad/destructive actions
   &.danger {
     background: $danger;
-    border: 1px solid darken($danger, $border-darken);
     color: #fff;
   }
   &.danger:hover { background: darken($danger, $hover-darken); }
+  &.danger.selected,
   &.danger:active { background: darken($danger, $active-darken); }
 
+  // Alternate style
   &.dark {
     background: $dark;
-    border: 1px solid darken($dark, $border-darken);
     color: #fff;
   }
   &.dark:hover { background: darken($dark, $hover-darken); }
+  &.dark.selected,
   &.dark:active { background: darken($dark, $active-darken); }
 
-  @include breakpoint(m) {
+  // When the screen is big enough, buttons keep their width
+  @include breakpoint(s) {
     display: inline-block;
     width: auto;
   }
@@ -106,21 +100,22 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-.boutton-group {
+.button-group {
   & > .button {
-    margin-left: -5px;
+    margin-left: -4px;
     border-radius: 0;
 
+    // Force buttons in a group to keep their width
     display: inline-block;
     width: auto;
   }
 
   & > :first-child {
     margin-left: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 2px 0 0 2px;
   }
 
   & > :last-child {
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 2px 2px 0;
   }
 }
