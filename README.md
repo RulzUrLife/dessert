@@ -37,9 +37,12 @@ Available tasks are:
     └── reset.scss
 ```
 
+# Documentation
+The documentation of the project is available in the `docs` folder. Some samples are available in the `docs/samples` folder.
+
 # TODO
 * ~~Grid system~~
-* Buttons
+* ~~Buttons~~
 * Forms
 * Menu
 * Navigation
