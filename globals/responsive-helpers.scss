@@ -2,7 +2,7 @@
 // See: http://css-tricks.com/conditional-media-query-mixins/
 @mixin breakpoint($point) {
 
-  $s: "(min-width:26em)";
+  $s: "(min-width:30em)";
   $m: "(min-width:40em)";
   $l: "(min-width:64em)";
 
