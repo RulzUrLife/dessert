@@ -1,6 +1,5 @@
-$border-darken: 7;
-$hover-darken: 7;
-$active-darken: 15;
+// Value used to lighten or darken a button's color depending on its state
+$color-modifier: 5;
 
 button,
 .button {
@@ -19,12 +18,13 @@ button,
   // By default, buttons that takes up the entire width of its container
   display: block;
   width: 100%;
+
   padding: .5em 1.5em;
-  white-space: nowrap;
-  text-align: center;
   border-radius: 2px;
 
   font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
 
   cursor: pointer;
   user-select: none;
@@ -47,45 +47,45 @@ button,
 
   // Default: for standard actions
   background: $lighter;
-  &:hover { background: darken($lighter, $hover-darken); }
+  &:hover { background: lighten($lighter, $color-modifier); }
   &.selected,
-  &:active { background: darken($lighter, $active-darken); }
+  &:active { background: darken($lighter, $color-modifier); }
 
   // Primary: for primary actions in forms
   &.primary {
     background: $primary;
     color: #fff;
   }
-  &.primary:hover { background: darken($primary, $hover-darken); }
+  &.primary:hover { background: lighten($primary, $color-modifier); }
   &.primary.selected,
-  &.primary:active { background: darken($primary, $active-darken); }
+  &.primary:active { background: darken($primary, $color-modifier); }
 
   // Success: for form whenever it creates something
   &.success {
     background: $success;
     color: #fff;
   }
-  &.success:hover { background: darken($success, $hover-darken); }
+  &.success:hover { background: lighten($success, $color-modifier); }
   &.success.selected,
-  &.success:active { background: darken($success, $active-darken); }
+  &.success:active { background: darken($success, $color-modifier); }
 
   // Danger: for bad/destructive actions
   &.danger {
     background: $danger;
     color: #fff;
   }
-  &.danger:hover { background: darken($danger, $hover-darken); }
+  &.danger:hover { background: lighten($danger, $color-modifier); }
   &.danger.selected,
-  &.danger:active { background: darken($danger, $active-darken); }
+  &.danger:active { background: darken($danger, $color-modifier); }
 
   // Alternate style
   &.dark {
     background: $dark;
     color: #fff;
   }
-  &.dark:hover { background: darken($dark, $hover-darken); }
+  &.dark:hover { background: lighten($dark, $color-modifier); }
   &.dark.selected,
-  &.dark:active { background: darken($dark, $active-darken); }
+  &.dark:active { background: darken($dark, $color-modifier); }
 
   // When the screen is big enough, buttons keep their width
   @include breakpoint(s) {
