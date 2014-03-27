@@ -13,6 +13,7 @@ button,
   font: inherit;
   // <button> don't inherit this property from <html>.
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   color: $dark;
 
   // By default, buttons that takes up the entire width of its container
