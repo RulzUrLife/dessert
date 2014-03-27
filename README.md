@@ -31,7 +31,7 @@ Available tasks are:
 │   ├── grid.scss
 │   └── buttons.scss
 ├── globals
-│   ├── responsive_helpers.scss
+│   ├── responsive-helpers.scss
 │   ├── variables.scss
 └── plugins
     └── reset.scss
@@ -39,6 +39,9 @@ Available tasks are:
 
 # Documentation
 The documentation of the project is available in the `docs` folder. Some samples are available in the `docs/samples` folder.
+
+# Browser support
+Dessert is designed to support the latest two versions (current and previous) of modern web browsers.
 
 # TODO
 * ~~Grid system~~
