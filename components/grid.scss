@@ -32,14 +32,31 @@ $container-width: 64rem;
 
 // Generate all the .colXofY classes
 // X <= Y and Y < $columns
+//
+// Two classes can't have the same width.
+// i.e .col2of4 and .col3of6 don't exist, because the have the
+// same computed width as .col1of2. Use .col1of2 instead
+//
 // The grid is only 'active' when the device width is large enough.
+
+// This list keeps track of all the available widths of the grid when it being
+// generated. It insures that a new .colXofY class is not generated if the grid
+// has another class with the same width.
+$list: ();
 @for $max-col from 1 through $columns {
   @for $col from 1 through $max-col {
-    @include breakpoint(m) {
-      .col#{$col}of#{$max-col} {
-        float: left;
-        width: $col / $max-col * 100%;
+    $width: $col / $max-col * 100%;
+
+    @if not index($list, $width) {
+      $list: append($list, $width, comma) !global;
+
+      @include breakpoint(m) {
+        .col#{$col}of#{$max-col} {
+          float: left;
+          width: $width;
+        }
       }
+
     }
   }
 }
