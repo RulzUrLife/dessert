@@ -1,3 +1,16 @@
+// Grid system
+$columns: 6;
+$rows: 16;
+$margin-padding: 4;
+$row-size: 2.5rem;
+$container-width: 64rem;
+
+// Helper function to omit the 'rem' unit when
+// property value is 0
+@function omit-zero($value) {
+ @return if($value == 0, $value, $value * 1rem);
+}
+
 // Border-box FTW!
 // See: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 *,
@@ -6,14 +19,8 @@
   box-sizing: border-box;
 }
 
-// Grid system
-$columns: 6;
-$rows: 16;
-$row_size: 2.5rem;
-$container_width: 64rem;
-
 .container {
-  max-width: $container_width;
+  max-width: $container-width;
   width: 94%;
   margin: 0 auto;
 
@@ -26,12 +33,12 @@ $container_width: 64rem;
 // Generate all the .colXofY classes
 // X <= Y and Y < $columns
 // The grid is only 'active' when the device width is large enough.
-@for $max_col from 1 through $columns {
-  @for $col from 1 through $max_col {
+@for $max-col from 1 through $columns {
+  @for $col from 1 through $max-col {
     @include breakpoint(m) {
-      .col#{$col}of#{$max_col} {
+      .col#{$col}of#{$max-col} {
         float: left;
-        width: $col / $max_col * 100%;
+        width: $col / $max-col * 100%;
       }
     }
   }
@@ -40,33 +47,48 @@ $container_width: 64rem;
 // Row classes
 @for $row from 1 through $rows {
   .row#{$row} {
-    min-height: $row * $row_size;
+    min-height: $row * $row-size;
 
     @include breakpoint(m) {
-      height: $row * $row_size;
+      height: $row * $row-size;
     }
   }
 }
 
-// Margins left (push) & right (pull)
-@for $max_col from 1 through $columns {
-  @for $col from 1 through $max_col {
+// Margins left (preXofY) & right (postXofY)
+// X <= Y and Y < $columns
+@for $max-col from 1 through $columns {
+  @for $col from 1 through $max-col {
     @include breakpoint(m) {
-      .pre#{$col}of#{$max_col} {
-        margin-left: $col / $max_col * 100%;
+      .pre#{$col}of#{$max-col} {
+        margin-left: $col / $max-col * 100%;
       }
     }
   }
 }
 
-@for $max_col from 1 through $columns {
-  @for $col from 1 through $max_col {
+@for $max-col from 1 through $columns {
+  @for $col from 1 through $max-col {
     @include breakpoint(m) {
-      .post#{$col}of#{$max_col} {
-        margin-right: $col / $max_col * 100%;
+      .post#{$col}of#{$max-col} {
+        margin-right: $col / $max-col * 100%;
       }
     }
   }
+}
+
+@for $i from 0 through $margin-padding {
+  .m#{$i} { margin: omit-zero($i) }
+  .m#{$i}x { margin: 0  omit-zero($i); }
+  .m#{$i}y { margin:  omit-zero($i) 0; }
+  .m#{$i}t { margin-top:  omit-zero($i); }
+  .m#{$i}r { margin-right:  omit-zero($i); }
+  .m#{$i}b { margin-bottom:  omit-zero($i); }
+  .m#{$i}l { margin-left:  omit-zero($i); }
+
+  .p#{$i} { padding:  omit-zero($i); }
+  .p#{$i}x { padding: 0  omit-zero($i); }
+  .p#{$i}y { padding:  omit-zero($i) 0; }
 }
 
 .centered {

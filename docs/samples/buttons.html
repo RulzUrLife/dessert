@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dessert - Buttons</title>
   <link rel="stylesheet" href="../../dist/dessert.css">
 </head>
@@ -60,8 +61,8 @@
       <a href="#" class="button dark disabled">Dark</a>
     </div>
 
-     <h3>Using button</h3>
-     <div class="col1of1">
+    <h3>Using button</h3>
+    <div class="col1of1">
       <button disabled>Normal</button>
       <button disabled class="primary">Primary</button>
       <button disabled class="success">Success</button>
@@ -73,29 +74,29 @@
     <h2>Blocks</h2>
     <h3>Using div</h3>
     <div class="col1of1">
-      <div class="button block">Normal</div>
-      <div class="button primary block">Primary</div>
-      <div class="button success block">Success</div>
-      <div class="button danger block">Danger</div>
-      <div class="button dark block">Dark</div>
+      <div class="button block">Block Normal</div>
+      <div class="button primary block">Block Primary</div>
+      <div class="button success block">Block Success</div>
+      <div class="button danger block">Block Danger</div>
+      <div class="button dark block">Block Dark</div>
     </div>
 
     <h3>Using links</h3>
     <div class="col1of1">
-      <a href="#" class="button block">Normal</a>
-      <a href="#" class="button primary block">Primary</a>
-      <a href="#" class="button success block">Success</a>
-      <a href="#" class="button danger block">Danger</a>
-      <a href="#" class="button dark block">Dark</a>
+      <a href="#" class="button block">Block Normal</a>
+      <a href="#" class="button primary block">Block Primary</a>
+      <a href="#" class="button success block">Block Success</a>
+      <a href="#" class="button danger block">Block Danger</a>
+      <a href="#" class="button dark block">Block Dark</a>
     </div>
 
     <h3>Using buttons</h3>
     <div class="col1of1">
-      <button class="button block">Normal</button>
-      <button class="button primary block">Primary</button>
-      <button class="button success block">Success</button>
-      <button class="button danger block">Danger</button>
-      <button class="button dark block">Dark</button>
+      <button class="button block">Block Normal</button>
+      <button class="button primary block">Block Primary</button>
+      <button class="button success block">Block Success</button>
+      <button class="button danger block">Block Danger</button>
+      <button class="button dark block">Block Dark</button>
     </div>
 
     <h2>Button groups</h2>
@@ -121,8 +122,8 @@
       <a href="#" class="button dark">12</a>
     </div>
 
-     <h3>Using button</h3>
-     <div class="button-group">
+    <h3>Using button</h3>
+    <div class="button-group">
       <button class="dark">1</button>
       <button class="dark">...</button>
       <button class="dark selected">2</button>
@@ -135,29 +136,31 @@
     <p>The .selected CSS class can be used to force the :active state of the button.</p>
 
     <h2>Example</h2>
-    <div class="col1of3 clearfix" style="padding: 2em;">
-      <p>Hej! Are you looking for something?</p>
-      <button class="primary fr">Search</button>
+    <div class="col1of3 clearfix p1">
+      <p class="p1">Hej! Are you looking for something?</p>
+      <div class="text-right">
+        <button class="primary">Search</button>
+      </div>
     </div>
 
-    <div class="col1of3 clearfix" style="padding: 2em;">
-      <p>Do you want to save this new receipe?</p>
-      <div class="fr">
+    <div class="col1of3 clearfix p1">
+      <p class="p1">Do you want to save this new receipe?</p>
+      <div class="text-right">
         <button >Cancel</button>
         <button class="success">Save</button>
       </div>
     </div>
 
-    <div class="col1of3 clearfix" style="padding: 2em;">
-      <p>You are about to delete a receipe. Are you sure?</p>
-      <div class="fr">
-        <button >Cancel</button>
-        <button class="danger">Delete</button>
+    <div class="col1of3 clearfix p1">
+      <p class="p1">You are about to delete a receipe. Are you sure?</p>
+      <div class="text-right">
+        <button>Cancel</button>
+        <button class="danger">Delete</Button>
+        </div>
       </div>
+
+      <p>Fin.</p>
+
     </div>
-
-    <p>Fin.</p>
-
-  </div>
-</body>
-</html>
+  </body>
+  </html>
