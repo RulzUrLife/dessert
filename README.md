@@ -1,4 +1,4 @@
-Dessert [![Build Status](https://travis-ci.org/RulzUrLife/dessert.svg)](https://travis-ci.org/RulzUrLife/dessert)
+Dessert [![Build Status](https://travis-ci.org/RulzUrLife/dessert.svg)](https://travis-ci.org/RulzUrLife/dessert) [![devDependency Status](https://david-dm.org/RulzUrLife/dessert/dev-status.svg)](https://david-dm.org/RulzUrLife/dessert#info=devDependencies)
 =======
 
 A simple and sweet design system
