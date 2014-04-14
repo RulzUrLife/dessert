@@ -96,16 +96,16 @@ $list: ();
 
 @for $i from 0 through $margin-padding {
   .m#{$i} { margin: omit-zero($i) }
-  .m#{$i}x { margin: 0  omit-zero($i); }
-  .m#{$i}y { margin:  omit-zero($i) 0; }
-  .m#{$i}t { margin-top:  omit-zero($i); }
-  .m#{$i}r { margin-right:  omit-zero($i); }
-  .m#{$i}b { margin-bottom:  omit-zero($i); }
-  .m#{$i}l { margin-left:  omit-zero($i); }
+  .m#{$i}x { margin: 0 omit-zero($i); }
+  .m#{$i}y { margin: omit-zero($i) 0; }
+  .m#{$i}t { margin-top: omit-zero($i); }
+  .m#{$i}r { margin-right: omit-zero($i); }
+  .m#{$i}b { margin-bottom: omit-zero($i); }
+  .m#{$i}l { margin-left: omit-zero($i); }
 
-  .p#{$i} { padding:  omit-zero($i); }
-  .p#{$i}x { padding: 0  omit-zero($i); }
-  .p#{$i}y { padding:  omit-zero($i) 0; }
+  .p#{$i} { padding: omit-zero($i); }
+  .p#{$i}x { padding: 0 omit-zero($i); }
+  .p#{$i}y { padding: omit-zero($i) 0; }
 }
 
 .centered {
