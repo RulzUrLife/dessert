@@ -48,7 +48,7 @@ $list: ();
     $width: $col / $max-col * 100%;
 
     @if not index($list, $width) {
-      $list: append($list, $width, comma) !global;
+      $list: append($list, $width, comma);
 
       @include breakpoint(m) {
         .col#{$col}of#{$max-col} {
