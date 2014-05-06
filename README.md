@@ -20,6 +20,26 @@ Available tasks are:
 * **`build`: builds a developper friendly version dessert (default task)**
 * `build:dist`: builds a production-ready version dessert
 * `watch`: runs the `build` task when a SASS file is modified
+* `bower`: build the bower packaging in `dist/bower-dessert` directory
+
+## Bower packaging
+
+Use `gulp bower` to package, clone the bower repo and copy files in
+the correct directory, commit, push and tag must be done manually.
+
+Here are the steps:
+
+* Move to `dist/bower-dessert`
+* Add files to git, commit and push to bower-dessert repo:
+    ```shell
+    git add -A
+    git commit -m 'Commit message for bower repo'
+    git push
+    ```
+* Create a new tag ```git tag -a v1.4 -m 'my version 1.4'```
+* Push tag to repo ```git push origin --tags```
+
+bower will automatically check the tags to infer the version
 
 ## Tests
 * Use`npm test` which runs the `build` task
