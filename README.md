@@ -1,15 +1,13 @@
-Dessert [![Build Status](https://travis-ci.org/RulzUrLife/dessert.svg)](https://travis-ci.org/RulzUrLife/dessert) [![devDependency Status](https://david-dm.org/RulzUrLife/dessert/dev-status.svg)](https://david-dm.org/RulzUrLife/dessert#info=devDependencies)
-=======
+# Dessert [![Build Status](https://travis-ci.org/RulzUrLife/dessert.svg)](https://travis-ci.org/RulzUrLife/dessert) [![devDependency Status](https://david-dm.org/RulzUrLife/dessert/dev-status.svg)](https://david-dm.org/RulzUrLife/dessert#info=devDependencies)
+> A simple and sweet design system
 
-A simple and sweet design system
+## Build
 
-# Build
-
-## Installation
+### Installation
 1. `npm install -g gulp`
 2. Use `npm install` inside project's folder to install all the required dependencies
 
-## Tasks
+### Tasks
 Usage: `gulp` (calls default task) or `gulp [task_name]`
 
 Available tasks are:
@@ -21,10 +19,10 @@ Available tasks are:
 * `build:dist`: builds a production-ready version dessert
 * `watch`: runs the `build` task when a SASS file is modified
 
-## Tests
+### Tests
 * Use`npm test` which runs the `build` task
 
-# Project organisation
+## Project organisation
 ```
 /
 ├── components
@@ -37,13 +35,13 @@ Available tasks are:
     └── reset.scss
 ```
 
-# Documentation
+## Documentation
 The documentation of the project is available in the `docs` folder. Some samples are available in the `docs/samples` folder.
 
-# Browser support
+## Browser support
 Dessert is designed to support the latest two versions (current and previous) of modern web browsers.
 
-# TODO
+## TODO
 * ~~Grid system~~
 * ~~Buttons~~
 * Forms
